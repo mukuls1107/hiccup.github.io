@@ -38,6 +38,7 @@ video {
     height: 100%;
     position: fixed;
     object-fit: cover;
+    z-index: -1;
 }
 
 #main {
@@ -56,19 +57,38 @@ video {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 #page1 h1 {
     font-size: 140px;
     font-weight: 900;
+    position: relative;
 }
 #page1 h2{
     font-size: 30px;
     font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    color: black;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 1px #95c11e;
+    z-index: -1;
 }
 
 #page p{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500;
     width: 40%;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
 }
